@@ -36,12 +36,13 @@ export default function Tablepagination() {
     ]
 
     const [currentpage,setCurrentpage] = useState(1);
-    const recordsperpage = 5;
+    const [recordsperpage,setRecordsperpage] = useState(5);
     const lastindex = recordsperpage * currentpage;
     const firstindex = lastindex - recordsperpage;
     const records = data.slice(firstindex,lastindex)
     const npage = Math.ceil(data.length/recordsperpage);
     const numbers = [...Array(npage + 1).keys()].slice(1);
+    const shownum = [...Array(data.length + 1).keys()].slice(1)
 
     const [show,setShow] = useState(false)
 
@@ -89,9 +90,22 @@ export default function Tablepagination() {
                     ))}
                 </tbody>
             </table>
+
          
 
             <ul style={{listStyle:"none",display:"flex",justifyContent:"space-around"}}>
+
+                        <li>
+                            <select value={recordsperpage} onChange={(e)=>{setRecordsperpage(e.target.value)}}>
+                            {shownum.map((s)=>(
+
+                                <option type='' style={{width:"50px"}}   >{s}</option>
+                                ))}
+                            </select>
+                        </li>
+
+                
+
                 <li onClick={handleCprevoius} >Previous</li>
                 {numbers.map((n,i)=>{
                     return(

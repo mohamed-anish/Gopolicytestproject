@@ -1,8 +1,9 @@
 import './App.css';
-import Test from './test';
+import Test from './Test';
 import Circular from './Circular';
 import Popupbar from './Popup';
 import Tablepagination from './Tablepagination';
+import Datanames from './Datanames';
 
 
 function App() {
@@ -29,10 +30,11 @@ function App() {
       </header>
 
       <div>
-      <Test/>
-      <Circular/>
-      <Popupbar/>
-      <Tablepagination/>
+      {/* <Test/> */}
+      {/* <Circular/> */}
+      {/* <Popupbar/> */}
+      {/* <Tablepagination/> */}
+      <Datanames/>
 
       </div>
       
