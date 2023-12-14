@@ -1,38 +1,162 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  /* background-color: darkgrey; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: white;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+} */
+
+.navbar{
+  /* background-color: aqua; */
+  width: 100%;
+  height: auto;
+  text-align: center;
+  display: inline-block
+}
+
+.nav{
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  background-color: aqua;
+  height: auto;
+}
+
+
+.navbar-links{
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar li{
+  list-style: none;
+  margin:10px auto;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 5px 2px 5px 1px red;
+  cursor: pointer;
+
+}
+
+.test-chart{
+  gap: 100px;
+  display: flex;
+}
+
+.active{
+  background-color: beige;
+  width:100px ;
+}
+
+.red{
+  background-color: red;
+  color: white;
+}
+
+.blue{
+  background-color: "blue";
+  color:"white"
+}
+
+.navbar .circleflow{
+  border: 16px solid blue;
+  border-top:16px solid white;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  animation:  rotate 2s linear infinite;
+}
+
+@keyframes rotate{
+  0% {transform: rotate(0deg);}
+  100%{ transform: rotate(360deg);}
+}
+
+.first-circle{
+  position: relative;
+}
+
+.indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.indicator-2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Slider{
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.table{
+  font-size: large;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background-color: blue;
+
+}
+
+td{background-color: antiquewhite;}
+
+.white{
+  background-color: white;
+  font-size: 20px;
+  color: red;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.hide{
+  cursor: pointer;
+  color: black;
+}
+
+.popupshow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top:0;
+  left:0;
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.popupshow-box{
+  background-color: white;
+  width: 400px;
+  height: 300px;
 }
