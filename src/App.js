@@ -29,9 +29,9 @@ function App() {
       </header>
 
       <div>
-      {/* <Test/> */}
-      {/* <Circular/> */}
-      {/* <Popupbar/> */}
+      <Test/>
+      <Circular/>
+      <Popupbar/>
       <Tablepagination/>
 
       </div>
